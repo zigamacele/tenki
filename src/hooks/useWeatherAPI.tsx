@@ -7,10 +7,15 @@ const useWeatherAPI = (city: string) => {
   const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
   const URL = `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`
 
-  const { data, isLoading } = useSWR([city], async () => axios(URL))
+  const { data, error, isLoading } = useSWR([city], async () => axios(URL))
+
+  if (error) {
+    console.error(error)
+  }
 
   return {
     weatherInformation: data?.data as WeatherData | undefined,
+    error,
     isLoading,
   }
 }
