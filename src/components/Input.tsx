@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { Search } from 'lucide-react'
 
 interface InputProps {
   setSearch: (userInput: string) => void
@@ -16,7 +16,7 @@ const Input: React.FC<InputProps> = ({ setSearch }) => {
 
   return (
     <section className='flex items-center justify-end gap-2 rounded-lg border border-neutral-200 bg-white px-3 py-1.5'>
-      <MagnifyingGlassIcon className='h-4 w-4 opacity-60' />
+      <Search className='h-4 w-4 opacity-60' />
       <input
         type='text'
         value={userInput}
