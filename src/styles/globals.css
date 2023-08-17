@@ -48,3 +48,18 @@ body {
     transform: translateY(0px);
   }
 }
+
+.slide-from-left {
+  animation: slide-from-left 1s ease;
+}
+
+@keyframes slide-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

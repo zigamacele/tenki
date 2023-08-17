@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({ setSearch }) => {
   }
 
   return (
-    <section className='flex items-center justify-end gap-2 rounded-lg border border-neutral-200 bg-white px-3 py-1.5'>
+    <section className='flex items-center justify-end gap-2 rounded-lg border border-neutral-200 bg-white px-3 py-1.5 fade-in'>
       <Search className='h-4 w-4 opacity-60' />
       <input
         type='text'

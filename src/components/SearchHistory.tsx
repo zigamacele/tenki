@@ -15,12 +15,12 @@ const SearchHistory: React.FC<SearchHistoryProps> = ({ search, setSearch }) => {
   }, [search])
 
   return (
-    <section className='flex items-center gap-1.5'>
+    <section className='flex items-center gap-1.5 fade-in'>
       <History className='h-5 w-5' />
       {history.slice(-5).map((item, index) => (
         <div
           key={index}
-          className='cursor-pointer rounded-lg border border-neutral-300 bg-neutral-200 px-2 py-0.5 text-xs capitalize text-neutral-600 hover:border-neutral-500 hover:bg-neutral-300'
+          className='slide-from-left cursor-pointer rounded-lg border border-neutral-300 bg-neutral-200 px-2 py-0.5 text-xs capitalize text-neutral-600 hover:border-neutral-500 hover:bg-neutral-300'
           onClick={() => setSearch(item)}
         >
           {item}
