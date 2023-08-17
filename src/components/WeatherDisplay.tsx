@@ -13,7 +13,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
   const { weatherInformation, isLoading } = useWeatherAPI(search)
 
   return (
-    <section>
+    <section className='relative'>
       {!isLoading && (
         <>
           <WeatherIcon weatherIcon={weatherInformation?.weather[0]?.icon} />
@@ -29,12 +29,12 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
               {weatherInformation?.name}
             </span>
           </div>
-          <div className='flex h-52 items-end justify-center'>
+          <div className='flex h-52 items-end justify-center gap-2 sm:gap-0'>
             <AdditionalInformation
               title='Humidity'
               weatherInformation={weatherInformation?.main.humidity}
             >
-              <Droplets className='h-5 w-5 opacity-60' />
+              <Droplets className='h-5 w-5' />
             </AdditionalInformation>
             <AdditionalInformation
               title='Feels like'
@@ -42,7 +42,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
                 weatherInformation?.main.feels_like,
               )}
             >
-              <Thermometer className='h-5 w-5 shrink-0 opacity-60' />
+              <Thermometer className='h-5 w-5 shrink-0' />
             </AdditionalInformation>
             <AdditionalInformation
               title='Min Temp'
@@ -50,7 +50,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
                 weatherInformation?.main.temp_min,
               )}
             >
-              <MinusCircle className='h-5 w-5 shrink-0 opacity-60' />
+              <MinusCircle className='h-5 w-5 shrink-0' />
             </AdditionalInformation>
             <AdditionalInformation
               title='Max Temp'
@@ -58,7 +58,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
                 weatherInformation?.main.temp_max,
               )}
             >
-              <PlusCircle className='h-5 w-5 shrink-0 opacity-60' />
+              <PlusCircle className='h-5 w-5 shrink-0' />
             </AdditionalInformation>
           </div>
         </>

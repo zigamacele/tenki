@@ -37,6 +37,7 @@ body {
 .slide-from-bottom {
   animation: slide-from-bottom 2s ease;
 }
+
 @keyframes slide-from-bottom {
   0% {
     opacity: 0;
