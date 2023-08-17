@@ -6,7 +6,7 @@
 
 simple single page weather app built with react
 
-[Check Live Version Here]()
+[Check Live Version Here](https://tenkiapp.vercel.app/)
 
 </div>
 
