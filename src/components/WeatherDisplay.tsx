@@ -40,7 +40,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
           </div>
           <div>
             <img src={ICON_URL} />
-            <div className='flex flex-col items-center justify-between gap-1.5'>
+            <div className='flex flex-col items-center gap-1.5'>
               <p className='text-7xl font-semibold'>
                 {formatTemperature(weatherInformation?.main.temp)}
               </p>

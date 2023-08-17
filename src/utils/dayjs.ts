@@ -13,5 +13,5 @@ export const getTimeWithOffset = (offset: number | undefined) => {
   const currentTime = dayjs()
     .utc()
     .utcOffset(offset / 60)
-  return currentTime.format('YYYY-MM-DD ・ HH:mm')
+  return currentTime.format('MMM DD ・ HH:mm')
 }
