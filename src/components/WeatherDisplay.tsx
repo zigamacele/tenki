@@ -29,7 +29,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
               {weatherInformation?.name}
             </span>
           </div>
-          <div className='flex h-52 items-end justify-center gap-2 sm:gap-0'>
+          <div className='flex h-52 items-end justify-center gap-2 pb-2 sm:gap-0 sm:pb-0'>
             <AdditionalInformation
               title='Humidity'
               weatherInformation={weatherInformation?.main.humidity}
