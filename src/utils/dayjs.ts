@@ -7,11 +7,11 @@ dayjs.extend(timezone)
 
 export const getTimeWithOffset = (offset: number | undefined) => {
   if (!offset) {
-    return ''
+    return 'Unknown'
   }
 
   const currentTime = dayjs()
     .utc()
     .utcOffset(offset / 60)
-  return currentTime.format('YYYY-MM-DD | HH:mm')
+  return currentTime.format('YYYY-MM-DD ・ HH:mm')
 }

@@ -2,6 +2,7 @@ import useWeatherAPI from '@/hooks/useWeatherAPI'
 import { getTimeWithOffset } from '@/utils/dayjs'
 import { Droplets, Thermometer, MinusCircle, PlusCircle } from 'lucide-react'
 import AdditionalInformation from './WeatherDisplay/AdditionalInformation'
+import { formatTemperature } from '@/utils/format'
 
 interface WeatherDisplayProps {
   search: string
@@ -11,6 +12,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
   const { weatherInformation, isLoading } = useWeatherAPI(search)
   const ICON_URL = `https://openweathermap.org/img/wn/${weatherInformation?.weather[0]?.icon}@4x.png`
 
+  console.log(weatherInformation)
   return (
     <section
       className='absolute bottom-5 left-1/2
@@ -28,7 +30,9 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
             </AdditionalInformation>
             <AdditionalInformation
               title='Feels like'
-              weatherInformation={`${weatherInformation?.main.feels_like}°`}
+              weatherInformation={formatTemperature(
+                weatherInformation?.main.feels_like,
+              )}
               rightSide={false}
             >
               <Thermometer className='h-5 w-5 shrink-0 opacity-60' />
@@ -38,9 +42,10 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
             <img src={ICON_URL} />
             <div className='flex flex-col items-center justify-between gap-1.5'>
               <p className='text-7xl font-semibold'>
-                {weatherInformation?.main.temp}°
+                {formatTemperature(weatherInformation?.main.temp)}
               </p>
-              <p className='text-sm opacity-60'>
+              <p className='whitespace-nowrap text-sm opacity-60'>
+                {weatherInformation?.sys.country} ・{' '}
                 {getTimeWithOffset(weatherInformation?.timezone)}
               </p>
               <p className='font-semibold uppercase tracking-[0.75em] opacity-60'>
@@ -51,14 +56,18 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
           <div className='mt-12 flex flex-col items-center gap-2'>
             <AdditionalInformation
               title='Min Temp'
-              weatherInformation={`${weatherInformation?.main.temp_min}°`}
+              weatherInformation={formatTemperature(
+                weatherInformation?.main.temp_min,
+              )}
               rightSide
             >
               <MinusCircle className='h-5 w-5 shrink-0 opacity-60' />
             </AdditionalInformation>
             <AdditionalInformation
               title='Max Temp'
-              weatherInformation={`${weatherInformation?.main.temp_max}°`}
+              weatherInformation={formatTemperature(
+                weatherInformation?.main.temp_max,
+              )}
               rightSide
             >
               <PlusCircle className='h-5 w-5 shrink-0 opacity-60' />
