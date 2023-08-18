@@ -12,7 +12,7 @@ const WeatherIcon: React.FC<WeatherIconProps> = ({ weatherIcon }) => {
         <img
           key={weatherIcon}
           src={image}
-          className='absolute bottom-[22em] left-1/2 -translate-x-1/2 slide-in-from-bottom'
+          className='absolute bottom-[16em] left-1/2 shrink-0 -translate-x-1/2 slide-in-from-bottom sm:bottom-[21em]'
         />
       )}
     </>

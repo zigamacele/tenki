@@ -17,8 +17,8 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
       {!isLoading && (
         <>
           <WeatherIcon weatherIcon={weatherInformation?.weather[0]?.icon} />
-          <div className='absolute bottom-24 left-1/2 z-40 flex -translate-x-1/2 flex-col items-center justify-center gap-1.5'>
-            <span className='mb-2 text-8xl font-semibold'>
+          <div className='absolute bottom-20 left-1/2 z-40 flex -translate-x-1/2 flex-col items-center justify-center gap-1.5'>
+            <span className='mb-2 text-7xl font-semibold sm:text-8xl'>
               {formatTemperature(weatherInformation?.main.temp)}
             </span>
             <span className='whitespace-nowrap text-sm opacity-60'>
@@ -29,7 +29,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
               {weatherInformation?.name}
             </span>
           </div>
-          <div className='flex h-52 items-end justify-center gap-2 pb-2 sm:gap-0 sm:pb-0'>
+          <div className='flex h-40 items-end justify-center gap-2 pb-2 sm:h-52 sm:gap-0 sm:pb-0'>
             <AdditionalInformation
               title='Humidity'
               weatherInformation={weatherInformation?.main.humidity}
