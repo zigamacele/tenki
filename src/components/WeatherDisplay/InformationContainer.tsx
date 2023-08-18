@@ -1,13 +1,13 @@
 import { WeatherData } from '@/types/apiResponse'
-import AdditionalInformation from './AdditionalInformationContainer/AdditionalInformation'
+import AdditionalInformation from './InformationContainer/AdditionalInformation'
 import { Droplets, Thermometer, MinusCircle, PlusCircle } from 'lucide-react'
 import { formatTemperature } from '@/utils/format'
 
-interface AdditionalInformationProps {
+interface InformationContainerProps {
   weatherInformation?: WeatherData
 }
 
-const AdditionlInformationContainer: React.FC<AdditionalInformationProps> = ({
+const InformationContainer: React.FC<InformationContainerProps> = ({
   weatherInformation,
 }) => {
   return (
@@ -46,4 +46,4 @@ const AdditionlInformationContainer: React.FC<AdditionalInformationProps> = ({
   )
 }
 
-export default AdditionlInformationContainer
+export default InformationContainer

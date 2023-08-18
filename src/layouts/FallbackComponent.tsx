@@ -17,10 +17,10 @@ const FallBackComponent: React.FC<FallBackComponentProps> = ({
 
       <button
         onClick={() => resetErrorBoundary()}
-        className='flex gap-2 rounded-lg border border-black/40 px-2 py-1 hover:bg-black hover:text-white'
+        className='flex items-center gap-2 rounded-lg border border-black/40 px-2 py-1 hover:bg-black hover:text-white'
       >
         <RotateCw width={16} />
-        <span>Refresh</span>
+        <span>Try again</span>
       </button>
     </section>
   )

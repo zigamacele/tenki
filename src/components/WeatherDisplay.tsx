@@ -1,6 +1,6 @@
 import useWeatherAPI from '@/hooks/useWeatherAPI'
 import WeatherIcon from './WeatherDisplay/WeatherIcon'
-import AdditionlInformationContainer from './WeatherDisplay/AdditionlInformationContainer'
+import InformationContainer from './WeatherDisplay/InformationContainer'
 import CurrentTemp from './WeatherDisplay/CurrentTemp'
 
 interface WeatherDisplayProps {
@@ -16,9 +16,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ search }) => {
         <>
           <WeatherIcon weatherIcon={weatherInformation?.weather[0]?.icon} />
           <CurrentTemp weatherInformation={weatherInformation} />
-          <AdditionlInformationContainer
-            weatherInformation={weatherInformation}
-          />
+          <InformationContainer weatherInformation={weatherInformation} />
         </>
       )}
     </>

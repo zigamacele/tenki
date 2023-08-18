@@ -7,7 +7,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ search }) => {
   return (
     <header className='relative m-2 overflow-hidden'>
-      <div className='absolute bottom-0 z-10 h-full w-full bg-gradient-to-t from-neutral-50 to-transparent opacity-30'></div>
+      <div className='absolute bottom-0 z-10 h-full w-full bg-gradient-to-t from-neutral-50 to-transparent opacity-20'></div>
       <img
         src={`https://source.unsplash.com/random/?${search}`}
         key={search}
