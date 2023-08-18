@@ -10,12 +10,14 @@ const AdditionalInformation: React.FC<AdditionalInformationProps> = ({
   children,
 }) => {
   return (
-    <div className='flex flex-col items-center px-2 py-1'>
-      <div className='flex items-center gap-2'>
+    <div className='flex flex-col items-center gap-1 px-2 py-1 sm:gap-0'>
+      <div className='flex items-center gap-2 opacity-60 sm:opacity-100'>
         {children}
-        <span className='hidden shrink-0 opacity-60 sm:block'>{title}</span>
+        <span className='text hidden shrink-0 text-sm opacity-100 sm:block'>
+          {title}
+        </span>
       </div>
-      <span>{weatherInformation}</span>
+      <span className='font-semibold'>{weatherInformation}</span>
     </div>
   )
 }
