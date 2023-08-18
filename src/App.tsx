@@ -11,7 +11,7 @@ const App: React.FC = () => {
     <main className='absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-2 drop-shadow-sm'>
       <SearchHistory search={search} setSearch={setSearch} />
       <Search setSearch={setSearch} />
-      <section className='relative w-[90vw] rounded-lg border border-neutral-200 bg-white fade-in sm:h-[40em] sm:w-[30em]'>
+      <section className='relative w-[85vw] rounded-lg border border-neutral-200 bg-white fade-in sm:h-[40em] sm:w-[30em]'>
         <Header search={search} />
         <WeatherDisplay search={search} />
       </section>
