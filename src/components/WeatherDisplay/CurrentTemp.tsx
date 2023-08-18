@@ -16,7 +16,7 @@ const CurrentTemp: React.FC<CurrentTempProps> = ({ weatherInformation }) => {
         {weatherInformation?.sys.country} ・{' '}
         {getTimeWithOffset(weatherInformation?.timezone)}
       </span>
-      <span className='font-bold uppercase tracking-[0.5em] opacity-80'>
+      <span className='whitespace-nowrap font-bold uppercase tracking-[0.5em] opacity-80'>
         {weatherInformation?.name}
       </span>
     </div>
