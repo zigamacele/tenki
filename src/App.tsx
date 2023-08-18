@@ -3,6 +3,7 @@ import Search from './components/Search'
 import WeatherDisplay from './components/WeatherDisplay'
 import SearchHistory from './components/SearchHistory'
 import Header from './components/Header'
+
 const App: React.FC = () => {
   const [search, setSearch] = useState('Seoul')
 

@@ -14,7 +14,7 @@ const InformationContainer: React.FC<InformationContainerProps> = ({
     <div className='flex h-40 items-end justify-center gap-3 pb-2 sm:h-52 sm:gap-0 sm:pb-0'>
       <AdditionalInformation
         title='Humidity'
-        weatherInformation={weatherInformation?.main.humidity}
+        weatherInformation={`${weatherInformation?.main.humidity}%`}
       >
         <Droplets className='h-5 w-5 shrink-0 opacity-60' />
       </AdditionalInformation>
