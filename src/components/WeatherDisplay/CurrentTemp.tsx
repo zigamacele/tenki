@@ -9,15 +9,15 @@ interface CurrentTempProps {
 const CurrentTemp: React.FC<CurrentTempProps> = ({ weatherInformation }) => {
   return (
     <div className='absolute bottom-20 left-1/2 z-40 flex -translate-x-1/2 flex-col items-center justify-center gap-1.5 fade-in sm:bottom-24'>
-      <span className='text-7xl font-semibold sm:mb-2 sm:text-8xl'>
+      <span className='text-6xl font-semibold sm:mb-2 sm:text-8xl'>
         {formatTemperature(weatherInformation?.main.temp)}
+      </span>
+      <span className='whitespace-nowrap font-bold uppercase tracking-[0.5em] opacity-80'>
+        {weatherInformation?.name}
       </span>
       <span className='whitespace-nowrap text-sm opacity-60'>
         {weatherInformation?.sys.country} ・{' '}
         {getTimeWithOffset(weatherInformation?.timezone)}
-      </span>
-      <span className='whitespace-nowrap font-bold uppercase tracking-[0.5em] opacity-80'>
-        {weatherInformation?.name}
       </span>
     </div>
   )
