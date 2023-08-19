@@ -49,6 +49,21 @@ body {
   }
 }
 
+.slide-from-top {
+  animation: slide-from-top 1s ease;
+}
+
+@keyframes slide-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .slide-from-left {
   animation: slide-from-left 1s ease;
 }

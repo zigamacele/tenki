@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ search }) => {
       <img
         src={`https://source.unsplash.com/random/?${search}`}
         key={search}
-        className='slide-from-bottom z-20 h-[25em] w-full rounded-t-md object-cover'
+        className='slide-from-bottom z-20 h-[25em] w-full rounded-t-xl object-cover'
         loading='lazy'
       />
       <img src={wave} className='absolute bottom-0 w-full' />
